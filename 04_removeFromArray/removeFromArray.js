@@ -1,7 +1,12 @@
 const removeFromArray = function (array, ...removeElement) {
-  let newArray = array.splice(removeElement - 1, 1);
+  const newArray = [];
 
-  return array;
+  array.forEach((element) => {
+    if (!removeElement.includes(element)) {
+      newArray.push(element);
+    }
+  });
+  return newArray;
 };
 
 // Do not edit below this line
